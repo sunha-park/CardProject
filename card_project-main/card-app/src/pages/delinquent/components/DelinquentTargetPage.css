@@ -1,0 +1,136 @@
+.delinquent-page {
+  padding: 32px;
+  font-family: 'Noto Sans KR', 'Pretendard', sans-serif;
+  background-color: #f9fbfd;
+  color: #1e2b4f;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A3D7C;
+  margin-bottom: 24px;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d9dee5;
+}
+
+.tab-bar button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab-bar button.active {
+  color: #1A3D7C;
+  border-bottom: 3px solid #1A3D7C;
+  background-color: #eef3fb;
+}
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  flex: 1 1 320px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e4ea;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.info-box h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A3D7C;
+}
+
+.info-box p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.detail-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.log-box,
+.checklist-box {
+  flex: 1 1 300px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e0e4ea;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.log-box h4,
+.checklist-box h4 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A3D7C;
+}
+
+.log-box ul,
+.checklist-box ul {
+  font-size: 14px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.file-section {
+  background: #eef3fb;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  text-align: center;
+  border: 1px solid #dce2ec;
+}
+
+.file-section h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1A3D7C;
+}
+
+.file-section button {
+  background-color: #1A3D7C;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.file-section button:disabled {
+  background-color: #b0b8c1;
+  cursor: not-allowed;
+}
+
+.ag-grid {
+  height: 420px;
+  width: 100%;
+}
