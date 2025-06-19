@@ -1,0 +1,91 @@
+/* ─────────────────────────────────────────────
+ *  DelinquentTargetPage.css  (compact modern)
+ * ───────────────────────────────────────────── */
+:root {
+  --blue-main : #0066ff;
+  --blue-light: #eaf2ff;
+  --gray-050  : #f9fafb;
+  --gray-200  : #e5e7eb;
+  --gray-300  : #d1d5db;
+  --gray-600  : #4b5563;
+  --radius    : 8px;
+  --shadow-sm : 0 1px 3px rgba(0,0,0,.05);
+  font-family : "Inter","Pretendard",-apple-system,BlinkMacSystemFont,sans-serif;
+}
+
+/* layout */
+.delinquent-page {
+  padding: 20px 26px;
+  background: var(--gray-050);
+  color: var(--gray-600);
+  font-size: 13px;
+}
+
+/* title */
+.page-title { margin: 0 0 16px; font-size: 19px; font-weight: 700; }
+
+/* tab */
+.tab-bar { display: flex; gap: 10px; margin-bottom: 12px; }
+.tab-bar button {
+  background: none; border: none; padding: 6px 12px; cursor: pointer;
+  font-size: 14px; font-weight: 600; color: var(--gray-600);
+  border-bottom: 2px solid transparent; transition: .15s;
+}
+.tab-bar button.active,
+.tab-bar button:hover {
+  color: var(--blue-main); border-color: var(--blue-main);
+}
+
+/* card wrappers */
+.info-wrap,
+.detail-section { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.info-box,
+.log-box,
+.checklist-box {
+  flex: 1 1 260px;
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 14px 16px;
+}
+.info-box h4,
+.log-box h4,
+.checklist-box h4 {
+  margin: 0 0 6px; font-size: 14px; font-weight: 700; color: #111;
+}
+
+.placeholder { color: #adb5bd; }
+
+/* detail lists */
+.log-box ul,
+.checklist-box ul { margin: 0; padding-left: 18px; line-height: 1.6; }
+
+/* PDF btn */
+.btn-area { margin: 12px 0 6px; }
+.pdf-btn {
+  padding: 6px 14px; border: none; border-radius: 6px;
+  background: var(--blue-main); color:#fff; font-size: 13px;
+  cursor: pointer; box-shadow: var(--shadow-sm);
+}
+.pdf-btn:hover { background: #0054e0; }
+.pdf-btn:disabled { background: var(--gray-300); cursor: not-allowed; }
+
+/* search */
+input.search {
+  width: 100%; padding: 8px 10px; margin: 10px 0 8px;
+  border: 1px solid var(--gray-300); border-radius: 6px; font-size: 13px;
+}
+input.search:focus { outline: none; border-color: var(--blue-main); }
+
+/* grid */
+.ag-grid-container {
+  height: 320px; width: 100%;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.ag-theme-alpine .ag-header,
+.ag-theme-alpine .ag-cell { font-size: 12px; line-height: 25px; }
+.ag-theme-alpine .ag-row-hover { background: var(--blue-light) !important; }

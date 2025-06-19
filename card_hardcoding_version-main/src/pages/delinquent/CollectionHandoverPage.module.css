@@ -1,0 +1,342 @@
+.handoverPage {
+  padding: 24px;
+  background-color: #f9fbfc;
+}
+
+/* 전체 필터 바 */
+.filterBar {
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+/* 드롭다운 */
+.filterGroup select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* 검색창 */
+.searchInput {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+/* 체크박스 그룹 */
+.checkboxGroup {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.checkboxGroup label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 4px;
+}
+
+/* 정렬 select */
+.sortSelect {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+
+/* 📌 전체를 세로 정렬로 전환 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #fafbfc;
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
+}
+
+/* 🔼 상단: 정보 카드 영역 */
+.topContent {
+  flex: 1;
+  padding: 36px 40px;
+  /* max-width: 640px; ⛔ 제거 */
+  /* min-width: 360px; ⛔ 제거 */
+  width: 100%; /* ✅ 전체 너비로 확장 */
+  margin: 0 auto;
+}
+
+/* 🔽 하단: AG Grid 리스트 영역 */
+.bottomList {
+  background: #f2f4f8;
+  padding: 24px 20px;
+  border-top: 1px solid #e0e3ea;
+  /* ✅ 너비 제한 제거 */
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+
+/* 📍 회원 선택 버튼 */
+.memberButton {
+  width: 100%;
+  text-align: left;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.memberButton:hover,
+.memberButton.selected {
+  background: #f0eafe;
+  font-weight: bold;
+}
+
+/* ✅ 탭 버튼 */
+.tabs {
+  margin: 20px 0 24px 0;
+}
+.tabButton {
+  padding: 8px 22px;
+  border: none;
+  background: #e7e7f7;
+  color: #47476b;
+  font-weight: 500;
+  border-radius: 18px 18px 0 0;
+  margin-right: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.tabButton.active {
+  background: #6f47c5;
+  color: #fff;
+}
+
+/* 📦 카드 공통 */
+.cardBox {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #1e287814;
+  padding: 22px 28px 18px 28px;
+  margin-bottom: 24px;
+}
+.cardTitle {
+  font-size: 1.14rem;
+  font-weight: 700;
+  color: #4e4597;
+  margin-bottom: 15px;
+}
+
+/* ✅ 정보 테이블 */
+.infoTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.98rem;
+}
+.infoTable th,
+.infoTable td {
+  border-bottom: 1px solid #ecebf3;
+  padding: 8px 10px;
+  text-align: left;
+}
+.infoTable th {
+  background: #f3f1fb;
+  font-weight: 600;
+  color: #555;
+}
+.infoTable tr:last-child td,
+.infoTable tr:last-child th {
+  border-bottom: none;
+}
+
+/* 🪧 안내 문구 */
+.detailBox {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #1e287817;
+  padding: 26px 30px;
+  margin-bottom: 24px;
+  min-height: 120px;
+}
+.emptyMsg {
+  color: #aaa;
+  font-size: 0.97rem;
+  margin: 16px 0 8px 0;
+}
+
+/* ✍️ 조치 입력 폼 */
+.actionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 6px;
+}
+.actionForm input,
+.actionForm select {
+  padding: 8px 10px;
+  border: 1px solid #d7d7ef;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.actionForm button {
+  padding: 8px 0;
+  border-radius: 7px;
+  background: #5f38bb;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.14s;
+}
+.actionForm button:disabled {
+  background: #ccc;
+  color: #eee;
+}
+
+/* 📱 모바일 대응 */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .topContent {
+    padding: 20px 16px;
+  }
+  .bottomList {
+    padding: 16px 12px;
+  }
+}
+
+.memberInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* ✅ 작게 */
+  gap: 10px 20px;  /* ✅ 줄임 */
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9fb;
+  padding: 6px 8px;         /* ✅ 패딩 줄임 */
+  border-radius: 6px;       /* ✅ 라운드 작게 */
+  border: 1px solid #e0e3ea;
+}
+
+.infoLabel {
+  font-size: 12px;          /* ✅ 더 작게 */
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.infoValue {
+  font-weight: 600;
+  color: #222;
+  font-size: 13px;
+}
+
+
+.actionForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.actionForm input,
+.actionForm select {
+  padding: 6px 8px;
+  border: 1px solid #d7d7ef;
+  border-radius: 5px;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.actionForm input::placeholder {
+  color: #aaa;
+}
+
+.actionForm button {
+  grid-column: span 2;
+  padding: 8px 0;
+  border-radius: 6px;
+  background: #5f38bb;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.14s;
+}
+
+.actionForm button:disabled {
+  background: #ccc;
+  color: #eee;
+}
+.infoTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.infoTable thead {
+  background: #f6f6fc;
+}
+
+.infoTable th,
+.infoTable td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.infoTable th {
+  font-weight: 600;
+  color: #555;
+  font-size: 13px;
+}
+
+.infoTable td {
+  color: #333;
+  font-weight: 400;
+}
+
+.downloadBtn {
+  font-size: 13px;
+  color: #4e6cef;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.downloadBtn:hover {
+  color: #264dc0;
+}
+
+.emptyMsg {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 8px;
+}

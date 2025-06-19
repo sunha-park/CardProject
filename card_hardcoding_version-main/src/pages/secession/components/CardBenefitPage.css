@@ -1,0 +1,283 @@
+.card-benefit-page {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  font-size: 1.7rem;
+  margin: 30px 0 20px 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.page-title .highlight {
+  color: #7c3aed;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.page-title .highlight-secondary {
+  color: #182848;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+/* 💬 툴바 내부 정렬 */
+.toolbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* 🔍 검색창 */
+.search-container {
+  width: 92%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px 10px 25px;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #7c3aed;
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.tab-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  color: #555;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.tab.active {
+  border-color: #7c3aed;
+  color: #7c3aed;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.left-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right-panel {
+  flex: 1;
+  min-width: 300px;
+  overflow-y: hidden;
+}
+
+.ag-grid-box {
+  height: 600px;
+  width: 100%;
+}
+
+.chart-title {
+  font-size: 1.0rem;
+  margin-bottom: 22px;
+}
+
+.customer-name {
+  font-weight: bold;
+}
+
+.highlight-blue {
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+.chart-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.chart-placeholder {
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-style: italic;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.card-selection-container {
+  display: flex;
+  flex-direction: column; /* 수직으로 카드 나열 */
+  gap: 10px;
+  margin-top: 20px;
+  height: auto;
+  overflow-y: auto;
+}
+
+/* 카드 아이템을 가로로 배치 */
+.card-item {
+  background: linear-gradient(to bottom right, #ffffff, #f7f9fc);
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row; /* ✅ 가로 배치 */
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 160px; /* ✅ 이미지 왼쪽 */
+  height: 120px;
+  object-fit: contain;
+  margin-right: 16px;
+}
+
+.card-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.card-score {
+  font-weight: 500;
+  color: #4f46e5;
+  font-size: 0.95rem;
+}
+
+.card-benefit {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+  margin: 2px;
+}
+
+.card-fee {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 2px;
+}
+
+/* 오버레이용 문자 발송 버튼 */
+.sms-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;           /* ✅ 전체 덮기 */
+  height: 100%;
+  background-color: #00000099; /* ✅ 반투명 검정 */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px; /* 카드 모서리와 유사하게 둥글게 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.sms-button:hover {
+  background-color: #000000bf; /* 조금 더 진하게 */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-selection-container .card-item {
+  animation: slideUp 0.4s ease-out;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-cell {
+  font-size: 10px;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-header-cell-label {
+  font-size: 11px;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-tooltip {
+  font-size: 11px;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-paging-panel {
+  font-size: 10px;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-floating-filter-input {
+  font-size: 11px;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-icon {
+  font-size: 11px;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-header-cell-menu-button {
+  font-size: 11px;
+}
+
+.card-benefit-page .ag-theme-alpine .ag-cell button {
+  font-size: 11px;
+  padding: 2px 6px;
+}
